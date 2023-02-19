@@ -1,26 +1,21 @@
 // Copyright 2021 NNTU-CS
 
 int gcd(int a, int b) {
-    
     int smallNumber = 0;
     int largeNumber = 0;
     int result = 0;
     int modulo = 1;
     int finalResult = 0;
 
-    if (b >= a)
-    {
+    if (b >= a) {
         largeNumber = b;
         smallNumber = a;
-    }
-    else
-    {
+    } else {
         largeNumber = a;
         smallNumber = b;
     }
 
-    while (modulo != 0)
-    {
+    while (modulo != 0) {
         finalResult = smallNumber;
         result = largeNumber / smallNumber;
         modulo = largeNumber % smallNumber;
@@ -29,5 +24,4 @@ int gcd(int a, int b) {
     }
 
     return finalResult;
-    
 }
